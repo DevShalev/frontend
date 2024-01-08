@@ -21,7 +21,17 @@ const App = () => {
     <div>
       <ul className="list-group">
         {
-          users.map(user => <li className="list-group-item" ><b> {user.name} | {user.email} </b></li>)
+          users.length > 0 ? (
+            <>
+            {
+              users.map(user => <li className="list-group-item" ><b> {user.name} | {user.email} </b></li>)  
+            }
+            </>
+          ) : (
+          <>
+            
+          </>)
+          
         }
       </ul>
     </div>
